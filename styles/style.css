@@ -72,6 +72,13 @@ button {
     height: 40px
 }
 
+button:hover {
+    background-color: transparent;
+    border: 2px solid white;
+    color: inherit;
+    cursor: pointer;
+}
+
 .button-1 {
     color: hsl(31, 77%, 52%);
 }
