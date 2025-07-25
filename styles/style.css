@@ -1,57 +1,135 @@
-*{
-    color:hsla(0, 0%, 100%, 0.75)  ;
+* {
+    box-sizing: border-box;
+    margin: 0;
 }
-button{
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Lexend Deca';
+    color: hsla(0, 0%, 100%, 0.75);
     background-color: hsl(0, 0%, 95%);
-    padding: 5%;
-    border-radius: 15px;
-    border: 2px white solid;
+}
 
-}
-#button1{
-background-color: hsl(31, 77%, 52%) ;
-}
-#button2{
- background-color: hsl(184, 100%, 22%);
-}
-#button3{
-background-color:hsl(179, 100%, 13%);
-}
-h1{
-    margin-bottom: 10%;
-    margin-top: 10%;
-    color: white;
-    font-family: "Lexend Deca", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-}
-p{
-    color:hsla(0, 0%, 100%, 0.75) ;
-    margin-bottom: 50%;
-    font-size: 16px;
-
-    
-}
-.parent{
+.parent {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 4%;
-}
-.child1{
-    padding: 2.5%;
-    background-color: hsl(31, 77%, 52%) ;
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
-}
-.child2{
-    padding:1.5%;
-    background-color: hsl(184, 100%, 22%);
-}
-.child3{
-    padding: 1.9%;
-    background-color:hsl(179, 100%, 13%);
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
+    ;
+    border-radius: 10px;
 }
 
+.child {
+    padding: 2rem;
+    color: hsla(0, 0%, 100%, 0.75);
+    background-color: hsl(31, 77%, 52%);
+    display: flex;
+    flex-direction: column;
+    gap: 25px
+}
+
+.child h1 {
+    font-family: 'Big Shoulders';
+    color: hsl(0, 0%, 95%);
+    font-weight: 500;
+}
+
+.child p {
+    line-height: 1.5;
+    font-size: 12px;
+    padding-right: 25px;
+}
+
+.child1 {
+    border-radius: 10px 10px 0 0;
+}
+
+.child2 {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.child3 {
+    background-color: hsl(179, 100%, 13%);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.button-container {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
+}
+
+button {
+    background-color: hsl(0, 0%, 95%);
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px white solid;
+    width: 60%;
+    font-weight: 400;
+    font-family: 'Lexend Deca';
+    height: 40px
+}
+
+button:hover {
+    background-color: transparent;
+    border: 2px solid white;
+    color: inherit;
+    cursor: pointer;
+}
+
+.button-1 {
+    color: hsl(31, 77%, 52%);
+}
+
+.button-2 {
+    color: hsl(184, 100%, 22%);
+}
+
+.button-3 {
+    color: hsl(179, 100%, 13%);
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .parent {
+        flex-direction: row;
+        flex-basis: 85%;
+        height: 350px;
+    }
+
+    .child {
+        justify-content: flex-start;
+        padding: 1.5rem;
+        height: 100%;
+    }
+
+    .child p {
+        padding: 0;
+    }
+
+    button {
+        width: 85%;
+    }
+
+    .child1 {
+        border-radius: 10px 0 0 10px
+    }
+
+    .child3 {
+        border-radius: 0 10px 10px 0;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .parent {
+        flex-basis: 700px;
+    }
+}
